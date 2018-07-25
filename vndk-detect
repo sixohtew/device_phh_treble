@@ -10,6 +10,11 @@ while read version;do
 done
 
 mount -o bind /system/bin/adbd /sbin/adbd
+
+if [ -f "/system/bin/phh-su" ]then;  
+mount -o bind /system/bin/phh-su /system/bin/su
+fi
+
 if ( getprop ro.hardware | grep -qE '(kirin970|hi3660|hi6250|hi3670)' );then
 	FOUND_HUAWEI=1
 	setprop persist.sys.bt_acl_bypass true
