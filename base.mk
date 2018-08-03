@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	bootctl \
-	vintf
+	vintf \
+	me.phh.treble.app \
 
 PRODUCT_COPY_FILES += \
 	device/phh/treble/twrp/twrp.rc:system/etc/init/twrp.rc \
