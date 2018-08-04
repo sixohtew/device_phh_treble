@@ -36,6 +36,7 @@ mount -o remount,rw /system
 
 modify_on_match "Xiaomi/polaris/polaris.*" "Xiaomi" "MIX 2S" "polaris" "polaris"
 modify_on_match "Xiaomi/clover/clover.*" "Xiaomi" "MI PAD 4" "clover" "clover"
+modify_on_match "essential/mata/mata.*" "Essential" "PH1" "mata" "mata"
 
 # End of devices
 
