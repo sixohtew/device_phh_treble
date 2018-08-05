@@ -2,11 +2,11 @@
 
 if [ "$(getprop ro.vendor.product.device)" == "HWBKL" ];then
       phh-su -c 'mount -o remount,rw /system'
-      phh-su -c 'rm -rf /system/priv-app/Camera2'
+      phh-su -c 'pm uninstall --user 0 com.android.camera2'
       phh-su -c 'mount -o remount,ro /system'
 else 
       phh-su -c 'mount -o remount,rw /system'
-      phh-su -c 'rm -rf /system/priv-app/HwCamera2'
+      phh-su -c 'pm uninstall --user 0 com.huawei.camera'
       phh-su -c 'mount -o remount,ro /system'
 fi
 
