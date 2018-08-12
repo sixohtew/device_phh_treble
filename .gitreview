@@ -1,0 +1,5 @@
+[gerrit]
+host=review.blissroms.com
+port=29418
+project=device_phh_treble.git
+defaultbranch=p9.0-gsi
