@@ -77,7 +77,7 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/change-device-name.sh:system/bin/change-device-name.sh
 	
 
-ifneq (,$(wildcard external/exfat)
+ifneq (,$(wildcard external/exfat))
 PRODUCT_PACKAGES += \
 	mkfs.exfat \
 	fsck.exfat
