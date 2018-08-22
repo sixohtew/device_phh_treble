@@ -10,10 +10,6 @@ else
       phh-su -c 'mount -o remount,ro /system'
 fi
 
-if grep -qF android.hardware.boot /vendor/manifest.xml;then
-	bootctl mark-boot-successful
-fi
-
 #Clear looping services
 sleep 30
 getprop | \
@@ -22,3 +18,7 @@ getprop | \
     while read svc ;do
         setprop ctl.stop $svc
     done
+
+if grep -qF android.hardware.boot /vendor/manifest.xml;then
+	bootctl mark-boot-successful
+fi
