@@ -10,6 +10,14 @@ else
       phh-su -c 'mount -o remount,ro /system'
 fi
 
+if [ -f /vendor/bin/mtkmal ];then
+    if [ "$(getprop persist.mtk_ims_support)" == 1 ];then
+        setprop persist.mtk_ims_support 0
+        setprop persist.mtk_epdg_support 0
+        reboot
+    fi
+fi
+
 #Clear looping services
 sleep 30
 getprop | \
